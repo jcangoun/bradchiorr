@@ -1,7 +1,7 @@
 const express = require('express'),
 mongoose = require('mongoose'),
 
-/*bcrypt = require('bcrypt'),*/
+bcrypt = require('bcrypt'),
 /*jwt = require('jsonwebtoken'),*/
 /*bodyParser = require('body-parser'),*/
 /*cors = require('cors'),*/
