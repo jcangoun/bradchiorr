@@ -18,7 +18,7 @@ app.use(bearerToken());*/
 /*const multer = require('multer');
 const upload = multer({ dest: 'uploads/' });*/
 
-
+                                                      // Je DEVRAI FAIRE LES ROUTES  REQ.BOY ET OUT EN UTILISANT LES NOMS DS JMERISE.
 
 /*app.use(express.static(__dirname + '/uploads'));*/
 
