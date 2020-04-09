@@ -2,9 +2,10 @@ const express = require('express'),
 mongoose = require('mongoose'),
 
 bcrypt = require('bcrypt'),
+auth = require('auth'),
 /*jwt = require('jsonwebtoken'),*/
 /*bodyParser = require('body-parser'),*/
-/*cors = require('cors'),*/
+cors = require('cors'),
 /*bearerToken = require('express-bearer-token'),*/
 port = 3000;
 app = express();
@@ -25,11 +26,11 @@ const upload = multer({ dest: 'uploads/' });*/
 
 mongoose.connect('mongodb://localhost/bradchiorrProj', {useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true});
 
-/*AuthController = require('./controllers/auth');
+AuthController = require('./controllers/auth');
 UserController = require('./controllers/user');
 
-app.route('/auth/login').post(AuthController.login);
-app.route('/auth/register').post(AuthController.register);*/
+/*app.route('/auth/login').post(AuthController.login);
+*//*app.route('/auth/register').post(AuthController.register);*/
 
 /*app.route('/users/list').get(UserController.getAll);
 app.route('/users/me').get(UserController.getById);

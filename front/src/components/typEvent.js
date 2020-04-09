@@ -13,5 +13,10 @@ class typEvent extends React.Component {
 	render() {
 
 		return <h1></h1>;
+
+		}
 	}
 }
+ReactDOM.render (
+
+	<typEvent />,	document.getElementById('app'));
