@@ -3,8 +3,9 @@ mongoose = require('mongoose'),
 
 bcrypt = require('bcrypt'),
 auth = require('auth'),
-jwt = require('jsonwebtoken'),
+/*jwt = require('jsonwebtoken'), no need de jwt pour les paiement ca*/
 /*bodyParser = require('body-parser'),*/
+
 cors = require('cors'),
 /*bearerToken = require('express-bearer-token'),*/
 port = 3000;
