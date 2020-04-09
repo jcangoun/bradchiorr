@@ -20,13 +20,9 @@ class media extends React.Component {
 
 
 	render() {
-		return (
-
-
-		);
+		
+		return <h1></h1>;
 	}
-
-
 }
 
 ReactDOM.render (

@@ -7,19 +7,17 @@ import React from 'react';
 
 class evenement extends React.Component {
 
-	constructor(propos) {
+	constructor(props) {
 		super(props);
-		this.state = {  };
+		this.state= { '' };
+	}
 
 
 	render() {
 
 
-		return (
+		return <h1></h1>;
 
-
-
-		);
 	}
 }
 

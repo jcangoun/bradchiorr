@@ -8,14 +8,10 @@ class typEvent extends React.Component {
 
 	constructor(propos) {
 		super(props);
-		this.state = {  };
+		this.state = { '' };
 
 	render() {
 
-		return (
-
-
-
-		);
+		return <h1></h1>;
 	}
 }
