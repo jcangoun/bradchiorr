@@ -3,7 +3,7 @@ mongoose = require('mongoose'),
 
 bcrypt = require('bcrypt'),
 auth = require('auth'),
-/*jwt = require('jsonwebtoken'), no need de jwt pour les paiement ca*/
+jwt = require('jsonwebtoken'), /* no need de jwt pour les paiement ca*/
 /*bodyParser = require('body-parser'),*/
 
 cors = require('cors'),
