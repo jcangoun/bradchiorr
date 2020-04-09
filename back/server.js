@@ -3,7 +3,7 @@ mongoose = require('mongoose'),
 
 bcrypt = require('bcrypt'),
 auth = require('auth'),
-/*jwt = require('jsonwebtoken'),*/
+jwt = require('jsonwebtoken'),
 /*bodyParser = require('body-parser'),*/
 cors = require('cors'),
 /*bearerToken = require('express-bearer-token'),*/
