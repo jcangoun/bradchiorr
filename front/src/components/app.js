@@ -24,7 +24,14 @@ class app extends React.Component {
 
 		return (
 
-			<div></div>
+			<div> 
+				<img />
+				<media />
+
+
+			</div>
+
+
 		
 		);
 	}

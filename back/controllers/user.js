@@ -1,6 +1,8 @@
 const User = require('../models/user'),
-Media = require('../models/media'),
-Utils = require('../utils');
+evenement = require('../models/evenement'),
+media = require('../models/media'),
+typEvent = require('../models/typEvent');
+/*Utils = require('../utils');*/   /*utils est a verifier , on n'en a pas besoin je pense. */
 
 const jwt_secret = process.env.JWT_SECRET_KEY,
 jwt = require('jsonwebtoken');

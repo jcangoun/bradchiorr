@@ -5,7 +5,7 @@ import React from 'react';
 
 
 
-class evenement extends React.Component {
+export class evenement extends React.Component {
 
 	constructor(props) {
 		super(props);

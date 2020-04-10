@@ -24,13 +24,15 @@ exports.login = function (req, res) {
     });
 }
 
-exports.register = function (req, res) {
-    let hash = bcrypt.hashSync(req.body.password, 10);
-    req.body.password = hash;
-    User.create(req.body, function(err, newUser) {
-        if (err)
-            res.status(400).json(err);
-        else
-            res.status(200).json(newUser);
-    });
-}
+    /*  exports.register = function (req, res) {
+           let hash = bcrypt.hashSync(req.body.password, 10);
+           req.body.password = hash;
+           User.create(req.body, function(err, newUser) {
+               if (err)
+                res.status(400).json(err);
+            else
+                res.status(200).json(newUser);
+        });
+    }
+
+    */                 /*la partie d inscription est a voir  puisque normalement il n'y a de comptes inscriptions */

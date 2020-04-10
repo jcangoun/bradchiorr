@@ -17,8 +17,11 @@ app.use(bodyParser.json());
 app.use(cors());
 app.use(bearerToken());*/
 
-/*const multer = require('multer');
-const upload = multer({ dest: 'uploads/' });*/
+const multer = require('multer');
+
+const upload = multer({ dest: 'uploads/' });
+
+/* Maintenant il manque les autres const ( jwt et toouuut etc ....) */
 
                                                       // Je DEVRAI FAIRE LES ROUTES  REQ.BOY ET OUT EN UTILISANT LES NOMS DS JMERISE.
 
