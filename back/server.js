@@ -33,8 +33,8 @@ mongoose.connect('mongodb://localhost/bradchiorrProj', {useNewUrlParser: true, u
 AuthController = require('./controllers/auth');
 UserController = require('./controllers/user');
 
-/*app.route('/auth/login').post(AuthController.login);
-*//*app.route('/auth/register').post(AuthController.register);*/
+app.route('/auth/login').post(AuthController.login);
+app.route('/auth/register').post(AuthController.register);
 
 /*app.route('/users/list').get(UserController.getAll);
 app.route('/users/me').get(UserController.getById);
