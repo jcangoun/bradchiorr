@@ -81,3 +81,17 @@ exports.login = function(req, res){
         }
     });
 };
+
+
+
+// Deconnection de l'user 
+
+exports.logout = function (req, res){
+
+    if(req.token){
+        
+        Blacklist.create({token: req.token}, function(err, result){
+            res.status(200).json ("Logout successfully"); 
+        })
+    }
+}

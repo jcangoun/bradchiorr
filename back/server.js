@@ -36,6 +36,12 @@ UserController = require('./controllers/user');
 app.route('/auth/login').post(AuthController.login);
 app.route('/auth/register').post(AuthController.register);
 
+// test function
+
+app.route('/').get(function(req, res){
+    res.send('hello world !');
+});
+
 /*app.route('/users/list').get(UserController.getAll);
 app.route('/users/me').get(UserController.getById);
 
