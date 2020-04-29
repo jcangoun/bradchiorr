@@ -6,8 +6,9 @@ adm_login = process.env.ADMIN_LOGIN;
 adm_password = process.env.ADMIN_PASSWORD;
 
 
+// Ce exports.login a une autre variante en bas  , il faut verifier ca vite .
 
-exports.login = function (req, res) {
+/*exports.login = function (req, res) {
     console.log(req.body.email);
     User.findOne({email: req.body.email}, function(err, user) {
         if (err)
@@ -26,7 +27,7 @@ exports.login = function (req, res) {
             })
         }
     });
-}
+}*/
 
       exports.register = function (req, res) {
            let hash = bcrypt.hashSync(req.body.password, 10);
