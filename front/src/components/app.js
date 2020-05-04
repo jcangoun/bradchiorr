@@ -21,7 +21,7 @@ class app extends React.Component {
 
 		super(props);
 		this.state = { '' };
-	} ;
+	}
 
 	render() {
 
