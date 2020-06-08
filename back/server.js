@@ -119,12 +119,45 @@ app.route('/changevent').put(Eventcontroller.updateEvent);
 // Route to delete an event by id : 
 app.route('/deletevent').delete(Eventcontroller.deleteEvent);  /*Les details perso sont a inserer */
 
+// // L'Event finit ici 
+
+
+//   LE media commence ici .................  .........................
+
+
+
+// Route to create a new media : 
+app.route('/newmedia').post(Mediacontroller.createMedia);  /*Les details persos sont a inserer */
+
+// Route to find an media by id : 
+app.route('/mediabyid').get(Mediacontroller.findMediaById);
+
+// Route to find all medias : 
+app.route('/mediaall').get(Mediacontroller.findAllMedia); 
+
+// Route to find an media by name : 
+app.route('/medianame').get(Mediacontroller.findMediaName); 
+
+// Route to find medias by tags : 
+app.route('/mediabytag').get(Mediacontroller.findMediaTag);
+
+// Route to find medias by date : 
+app.route('/mediabydate').get(Mediacontroller.findMediabyDate); 
+
+// Route to update an media by id : 
+app.route('/changmedia').put(Mediacontroller.updateMedia); 
+
+// Route to delete an media by id : 
+app.route('/deletmedia').delete(Mediacontroller.deleteMedia);
+
+/*Les details perso sont a inserer */
+
 // //  le media finit ici                                     .........
 
 /*app.route('/users/list').get(UserController.getAll);
 app.route('/users/me').get(UserController.getById);
 
-app.route('/media/upload').post(upload.single('media'), UserController.addMedia);
+app.route('/media/upload').post(upload.single('media'), Controller.addMedia);
 app.route('/medias').get(UserController.getMedias);*/
 
 
