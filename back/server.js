@@ -8,7 +8,7 @@ jwt = require('jsonwebtoken'), /* no need de jwt pour les paiement ca*/
 
 cors = require('cors'),
 /*bearerToken = require('express-bearer-token'),*/
-port = 3050;
+port = 3000;
 app = express();
 require('dotenv').config();
 
@@ -52,13 +52,45 @@ app.route('/').get(function(req, res){
 
 
 // Ici c est l'user qui commence en bas                        ...... 
+app.route('/newevent').post(Eventcontroller.createUser
+	);  /*Les details persos sont a inserer */
 
+// Route to find an event by id : 
+app.route('/eventbyid').get(Eventcontroller.findUser
+	ById);
+
+// Route to find all events : 
+app.route('/eventall').get(Eventcontroller.findAllUser
+	); 
+
+// Route to find an event by name : 
+app.route('/eventname').get(Eventcontroller.findUser
+	Name); 
+
+// Route to find events by tags : 
+app.route('/eventbytag').get(Eventcontroller.findUser
+	Tag);
+
+// Route to find events by date : 
+app.route('/eventbydate').get(Eventcontroller.findUser
+	byDate); 
+
+// Route to update an event by id : 
+app.route('/changevent').put(Eventcontroller.updateUser
+	); 
+
+// Route to delete an event by id : 
+app.route('/deletevent').delete(Eventcontroller.deleteUser
+	);
 
 
 
 // et l'user est fini juste là haut                            ......
 
 // Et on met le media Dans ce Bloc Inter messages             .........
+
+// 
+
 
 
 // Event : 
