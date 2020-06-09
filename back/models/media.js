@@ -14,7 +14,7 @@ let mediaSchema = new mongoose.Schema({
 
 	time_media: {
 
-		type: 'time',
+		type: 'string',
 		required: 'Please there is needed time for this media'
 	},
 

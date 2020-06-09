@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 
 let evenementSchema = new mongoose.Schema({
     name_event: {
-        type: 'string',
+        type: String,
         required: 'You need to specifie a name_event to resolve the problem'
     },
 
@@ -14,12 +14,12 @@ let evenementSchema = new mongoose.Schema({
     }],// ci dessous 1 clé primaire finie ..................................
 
     start_date_event: {
-        type: 'date',
+        type: Date,
         required: 'we need you to add date of beginning'
     },
 
     end_date_event: {
-        type: 'date',
+        type: Date,
         required: 'we need you to add date of finishing'
     },
 
@@ -32,13 +32,13 @@ let evenementSchema = new mongoose.Schema({
 
     link_event: {
 
-        type: 'string',
+        type: String,
         required: 'we really need you to put a link for this event'
     },
         
     date_event: {
-        type: 'date',  // event takes place at this date 
-        required: 
+        type: Date,  // event takes place at this date 
+        default: Date.now
     },
 
 

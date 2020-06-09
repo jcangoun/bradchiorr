@@ -1,17 +1,16 @@
 const User = require('../models/user'),
 evenement = require('../models/evenement'),
 media = require('../models/media'),
-typEvent = require('../models/typEvent');
+typEvent = require('../models/typEvent'),
 /*Utils = require('../utils');*/   /*utils est a verifier , on n'en a pas besoin je pense. */
 
-bcrypt = require ('bcrypt'); 
-jwt = require ('jsonwebtoken'); 
+bcrypt = require ('bcrypt'), 
+jwt = require ('jsonwebtoken'), 
 bearerToken = require('express-bearer-token');
 
 //
 
-const jwt_secret = process.env.JWT_SECRET_KEY,
-jwt = require('jsonwebtoken');
+const jwt_secret = process.env.JWT_SECRET_KEY;
 
 exports.getAll = function(req, res) {
     let isAdmin = Utils.isAdmin(req.token);

@@ -1,46 +1,19 @@
 const User = require('../models/user'),
-bcrypt = require('bcrypt'),
+bcrypt = require('bcrypt'), 
 jwt = require('jsonwebtoken'),
 jwt_secret = process.env.JWT_SECRET_KEY;
 adm_login = process.env.ADMIN_LOGIN; 
 adm_password = process.env.ADMIN_PASSWORD;
 
 
-// Ce exports.login a une autre variante en bas  , il faut verifier ca vite .
 
-/*exports.login = function (req, res) {
-    console.log(req.body.email);
-    User.findOne({email: req.body.email}, function(err, user) {
-        if (err)
-            res.status(400).json({auth: false, message: err});
-        else if (!user)
-            res.status(401).json({auth: false, message: "no user finded"});
-        else {
-            bcrypt.compare(req.body.password, user.password, function(err, result) {
-                if (result)
-                {
-                    var token = jwt.sign({id: user._id, admin: user.admin }, jwt_secret);
-                    res.status(200).json({auth: true, token: token});
-                }
-                else
-                    res.status(201).json({auth: false, message: "password not match"});
-            })
-        }
-    });
-}*/
 
       exports.register = function (req, res) {
            let hash = bcrypt.hashSync(req.body.password, 10);
            req.body.password = hash;
-           req.body.admin = false;
+           
 
 
-           let user = new User ({
-
-                name : req.body.name, 
-                email : req.body.email,
-                password : hash, 
-              }); 
 
            //Ce qui suit en dessous faut voir mettre ou enlever atester 
 
@@ -62,7 +35,7 @@ exports.login = function(req, res){
     User.findOne({email: req.body.email}, function(err, user){
 
         if (err)
-            res.status(400).json({auth: false, message: There is any err}); 
+            res.status(400).json({auth: false, message: 'There is any err'}); 
 
         else if (!user)
             res.status(201).json({auth: false, message: 'No user found'}); 
@@ -70,7 +43,7 @@ exports.login = function(req, res){
         else {
             bcrypt.compare(req.body.password, user.password, function(err, result){
                 if (result) {
-                    let token = jwt.sign({id: user._id, admin: false}, jwt_secret, {expiresIn: '1h'}); 
+                    let token = jwt.sign({id: user._id, admin: user.admin}, jwt_secret, {expiresIn: '24h'}); 
                     res.status(200).json({auth: true, user: user, token: token}); 
                         
                         console.log(token)
